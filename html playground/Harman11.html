@@ -2,24 +2,42 @@
 <html>
 <body>
 
-<p>Click the button to get a time-based greeting:</p>
+	<p>Electricity Bill is:</p> &nbsp; <span>Rs</span> <span id="bill"></span>
 
-<p id="demo"></p>
+	<script>
+		function calculate(units) {
+			var rate=0,surcharge=0,gross_bill=0,net_bill=discount=0;
 
-<script>
-{
- var a=20000;
- if(a<10000)
- {
- result=a;
- }
- else if(a>10000)
- {
- Value=20/100*20000;
- result=a-Value;
-  }
-  document.getElementById("demo").innerHTML ="$"+ result;
-}
+			// calculating bill on the basis of mentioned criteria.
+			if (units<50){
+				surcharge=0;
+				rate=5;
+			}
+			else if(units<100){
+				surcharge=2;
+				rate=6;	
+			}
+			else if(units<250){
+				surcharge=2.5;
+				rate=6.5;	
+			}
+			else{
+				surcharge=3.5;
+				rate=7;	
+			}
+			gross_bill=units*rate;
+			net_bill=gross_bill+gross_bill*surcharge/100;
+			if(net_bill>25000){
+				net_bill=net_bill-(10*net_bill/100);
+			}
+			return net_bill;
+			
+		}
+		function display(){
+			var bill = calculate(50);
+			document.getElementById("bill").innerHTML = "" + bill;
+		}
+		display();
 </script>
 
 </body>
