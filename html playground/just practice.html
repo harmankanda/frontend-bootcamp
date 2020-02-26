@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Just Practice</title>
+</head>
+<body>
+     <h2>Just Practice</h2>
+     <script>
+	     	function checkPrime(n){
+			var i, flag=true;
+			for(i=2;i<=n/2;i++)
+			{
+			    if(n%i==0)
+	      	   {
+				  	flag=false;
+				  	break;
+			   }
+			 }   
+			 return flag;
+		}	
+			function printprime(startingRange,endingRange){
+				var num = startingRange;
+				var primeCount=0;
+				var nonPrimeCount=0;
+				while(num<=endingRange)
+				{	
+					if (checkPrime(num)){
+                        primeCount++;
+                        console.log(num);
+					}
+					else{
+						nonPrimeCount++;
+					}
+					num++;	
+				}
+				console.log("Prime"+primeCount);
+				console.log("Non Prime"+nonPrimeCount);
+			result=0;
+		}
+     </script>
+</body>
+</html>
