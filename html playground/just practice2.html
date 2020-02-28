@@ -61,23 +61,53 @@
 			{
 				if(a>b&&a>c&&a>d)
 				{
-					console.log("A is winner with " + a);
-					alert("A is winner with " + a);
+					console.log("A is winner with " + a + "votes");
+					alert("A is winner with " + a + "votes");
 				}
 				else if(b>a&&b>c&&b>d)
 				{
-					console.log("B is winner with " + b);
-					alert("B is winner with " + b);
+					console.log("B is winner with " + b + "votes");
+					alert("B is winner with " + b + "votes");
 				}
 				else if(c>b&&c>a&&c>d)
 				{
-					console.log("C is winner with " + c);
-					alert("C is winner with " + c);
+					console.log("C is winner with " + c + "votes");
+					alert("C is winner with " + c + "votes");
 				}
-				else
+				else if(d>b&&d>a&&d>c)
 				{
-					console.log("D is winner with " + d);
-					alert("D is winner with " + d);
+					console.log("D is winner with " + d + "votes");
+					alert("D is winner with " + d + "votes");
+				}
+				else if(a==b)
+				{
+					console.log("A and B are winners with " + a + "votes");
+					alert("A and B are winners with " + a + "votes");
+				}
+				else if(a==c)
+				{
+					console.log("A and C are winners with " + a + "votes");
+					alert("A and C are winners with " + a + "votes");
+				}
+				else if(a==d)
+				{
+					console.log("A and D are winners with " + d + "votes");
+					alert("A and D are winners with " + d + "votes");
+				}
+				else if(b==c)
+				{
+					console.log("B and C are winners with " + b + "votes");
+					alert("B and C are winners with " + b + "votes");
+				}
+				else if(b==d)
+				{
+					console.log("B and D are winners with " + b);
+					alert("B and D are winners with " + b + "votes");
+				}
+				else 
+				{
+					console.log("C and D are winners with " + c);
+					alert("C and D are winners with " + c + "votes");
 				}
 			}
 		}
