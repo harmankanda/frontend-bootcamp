@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Live Poll System in X class</title>
+</head>
+<body bgcolor="lightgreen">
+	<fieldset>
+		<legend>Choose Your Representative</legend>
+		<table border="20">
+			<tr>
+				<td><input type="button" value="Vote for A" onclick="VoteA()"></input></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Vote for B" onclick="VoteB()"></input></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Vote for C" onclick="VoteC()"></input></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Vote for D" onclick="VoteD()"></input></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Check Result" onclick="Check()"></input></td>
+			</tr>
+			<script>
+				var a=0;
+				var b=0;
+				var c=0;
+				var d=0;
+			function VoteA(){
+				{
+				a++;
+				console.log("A's vote count: " +a);
+				}
+			}
+		
+			function VoteB(){
+				{
+				b++;
+				console.log("B's vote count: " +b);
+				}
+			}
+		
+	
+			function VoteC(){
+				{
+				c++;
+				console.log("C's vote count: " +c);
+				}
+			}
+		
+	
+			function VoteD(){
+				{
+				d++;
+				console.log("D's vote count: " +d);
+				}
+			}
+		
+			function Check(){
+			{
+				if(a>b&&a>c&&a>d)
+				{
+					console.log("A is winner with " + a);
+					alert("A is winner with " + a);
+				}
+				else if(b>a&&b>c&&b>d)
+				{
+					console.log("B is winner with " + b);
+					alert("B is winner with " + b);
+				}
+				else if(c>b&&c>a&&c>d)
+				{
+					console.log("C is winner with " + c);
+					alert("C is winner with " + c);
+				}
+				else
+				{
+					console.log("D is winner with " + d);
+					alert("D is winner with " + d);
+				}
+			}
+		}
+		</script>
+</body>
+</html>
+				
