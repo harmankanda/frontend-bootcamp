@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Just Practice</title>
+</head>
+<body>
+	<script>
+		
+		function main(num){
+		var firstDigit, lastDigit, Digits, middleDigit, value, value3;
+		var nod=0;
+		var originalNumber = num;
+    lastDigit=num%10;
+ //    while(num>0){
+ //            firstDigit=num;
+ //        	num=parseInt(num/10); 
+	// }
+	
+		while(num)
+		{
+			nod++;
+			num=parseInt(num/10);
+		}
+					// console.log(count);
+      // console.log("sum of first and last digit of the number: ",(hi));
+      	dividingFactor = Math.pow(10,(nod-1));
+      firstDigit = parseInt (originalNumber / dividingFactor);
+      // console.log(firstDigit);
+  		value = (originalNumber % dividingFactor); 
+  		middleDigit = value-lastDigit;
+  		value3 = middleDigit+firstDigit; 
+  		value4 = dividingFactor*lastDigit+value3;
+  		console.log(value4);
+  		alert(value4);
+}
+</script>
+</body>
+</html>

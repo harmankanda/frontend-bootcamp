@@ -1,0 +1,130 @@
+<html>
+<head>
+    <style>
+        #bttn{
+            color:green;
+            margin-top:16px;
+            padding:20px;
+            margin-right:8px;
+            background-color:aqua;
+        }
+        #endd{
+            color:azure;
+            background-color:dimgrey;
+            padding:25px;
+            margin-right:8px;
+            margin-top:16px;
+        }
+        
+    </style>
+    </head>
+<body>
+    <center>
+        <label id="label1"> A:</label>
+        <label id="label2"> B:</label>
+        <label id="label3"> C:</label>
+        <label id="label4"> D:</label>
+        <fieldset>
+            <legend><h3 style="color:darkorange">VOTING PAGE</h3></legend>
+            <button onclick="A()" id="bttn">Click here to vote for A candidate</button>
+            <button onclick="B()" id="bttn">Click here to vote for B candidate</button><br>
+            <button onclick="C()" id="bttn">Click here to vote for C candidate</button>
+            <button onclick="D()" id="bttn">Click here to vote for D candidate</button><br>
+            <button onclick="Checkstatus()" id="endd">Click here to check the status</button>
+            <button onclick="end()" id="endd">click here to see the winner name</button>
+        </fieldset>
+    </center>
+    <script type="text/javascript">
+        function text()
+        {
+            document.getElementById("label1").innerHTML="A's votes: "+a; 
+            document.getElementById("label2").innerHTML="B's votes: "+b;
+            document.getElementById("label3").innerHTML="C's votes: "+c;
+            document.getElementById("label4").innerHTML="D's votes: "+d;
+        }
+        var a=0;
+    function A()
+        {
+            console.log("Pressed A candidate button");
+               a++;
+            text();
+        }
+        var b=0;
+    function B()
+        {
+            console.log("pressed B candidate button");
+            b++;
+            text();
+        }
+        var c=0;
+    function C()
+        {
+            console.log("Pressed C candidate button");
+            c++;
+            text();
+        }
+        var d=0;
+    function D()
+        {
+            console.log("pressed D candidate button");
+            d++;
+            text();
+        }
+        function Checkstatus()
+        {
+            var linebreak="<br>";
+        alert("A candidate has "+a+" current votes");
+        alert("B candidate has "+b+" current votes");
+        alert("C candidate has "+c +" current votes");
+        alert("D candidate has "+d+" current votes");
+        }
+    function end()
+        {
+            if(a>b&&a>c&&a>d)
+                     {
+                         alert("A is winner with "+a+" votes ");
+                     }
+              else if(b>a&&b>c&&b>d)
+                {
+                    alert("B is winner with "+b+" votes ");
+                }
+             else if(c>d&&c>a&&c>b)
+                {
+                    alert("C is winner with "+c+" votes ");
+                }
+           else if(d>a&&d>b&&d>c)
+            {
+                alert("D is the winner with "+d+" votes ");
+            }
+              else if(a==b)
+                {
+                    alert("Both A and B are winners with "+a+" votes ");
+                }
+             else if(a==c)
+                {
+                 alert("Both A and C are winners with "+c+" votes ");
+                    
+                }
+             else if(a==d)
+                {
+                    alert("Both A and D are the winners with "+a+" votes ");
+                }
+             else if(b==c)
+               {
+                alert("Both B and C are winners with "+b+" votes ");
+               }
+            else if(b==d)
+                {
+                alert("Both B and D are the winners with "+b+" votes ");
+                }
+            else if(c==d)
+                {
+                    alert("Both C and D are the winners with "+ c +" votes ");
+                }
+            else
+            {
+            alert("D is the winner");
+            }   
+        }
+    </script>
+    </body></html>
