@@ -7,6 +7,7 @@
             padding:20px;
             margin-right:8px;
             background-color:aqua;
+            border-color: yellow;
         }
         #endd{
             color:azure;
@@ -14,6 +15,7 @@
             padding:25px;
             margin-right:8px;
             margin-top:16px;
+            border-color: orange;
         }
         
     </style>
@@ -72,7 +74,7 @@
         }
         function Checkstatus()
         {
-            var linebreak="<br>";
+            
         alert("A candidate has "+a+" current votes");
         alert("B candidate has "+b+" current votes");
         alert("C candidate has "+c +" current votes");
@@ -81,9 +83,9 @@
     function end()
         {
             if(a>b&&a>c&&a>d)
-                     {
+                {
                          alert("A is winner with "+a+" votes ");
-                     }
+                }
               else if(b>a&&b>c&&b>d)
                 {
                     alert("B is winner with "+b+" votes ");
@@ -93,9 +95,9 @@
                     alert("C is winner with "+c+" votes ");
                 }
            else if(d>a&&d>b&&d>c)
-            {
+                {
                 alert("D is the winner with "+d+" votes ");
-            }
+                }
               else if(a==b)
                 {
                     alert("Both A and B are winners with "+a+" votes ");
@@ -110,9 +112,9 @@
                     alert("Both A and D are the winners with "+a+" votes ");
                 }
              else if(b==c)
-               {
+                {
                 alert("Both B and C are winners with "+b+" votes ");
-               }
+                }
             else if(b==d)
                 {
                 alert("Both B and D are the winners with "+b+" votes ");
@@ -122,9 +124,9 @@
                     alert("Both C and D are the winners with "+ c +" votes ");
                 }
             else
-            {
-            alert("D is the winner");
-            }   
+                {
+                    alert("D is the winner");
+                }   
         }
     </script>
     </body></html>
