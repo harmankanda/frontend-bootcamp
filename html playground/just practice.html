@@ -18,22 +18,25 @@
 			 }   
 			 return flag;
 		}	
-			function sumprime(startingRange,primeCount){
-				var value,
-			    num = ++startingRange;
-				var count = 0;
-				var sum=0;
-				while(count<primeCount)
-				{
-					if(checkPrime(num)){
-						sum = sum + num;
-						count++;	
+			function printprime(startingRange,endingRange){
+				var num = startingRange;
+				var primeCount=0;
+				var nonPrimeCount=0;
+				while(num<=endingRange)
+				{	
+					if (checkPrime(num)){
+                        primeCount++;
+                        console.log(num);
 					}
-					num++;
+					else{
+						nonPrimeCount++;
+					}
+					num++;	
 				}
-				console.log(sum);
-			}
-
+				console.log("Prime"+primeCount);
+				console.log("Non Prime"+nonPrimeCount);
+			result=0;
+		}
      </script>
 </body>
 </html>
