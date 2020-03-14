@@ -17,23 +17,21 @@
             margin-top:16px;
             border-color: orange;
         }
-        #label{
-            visibility: none;
-        }
+        
     </style>
     </head>
 <body>
     <center>
-        <label id="label1"> Harman:</label>
-        <label id="label2"> Gurnoor:</label>
-        <label id="label3"> Joban:</label>
-        <label id="label4"> Mehraj:</label>
+        <label id="label1"> A:</label>
+        <label id="label2"> B:</label>
+        <label id="label3"> C:</label>
+        <label id="label4"> D:</label>
         <fieldset>
-            <legend><h2 style="color:darkorange">VOTING PAGE</h2></legend>
-            <button onclick="A()" id="bttn">Click here to vote for Harman candidate</button>
-            <button onclick="B()" id="bttn">Click here to vote for Gurnoor candidate</button><br>
-            <button onclick="C()" id="bttn">Click here to vote for Joban candidate</button>
-            <button onclick="D()" id="bttn">Click here to vote for Mehraj candidate</button><br>
+            <legend><h3 style="color:darkorange">VOTING PAGE</h3></legend>
+            <button onclick="A()" id="bttn">Click here to vote for A candidate</button>
+            <button onclick="B()" id="bttn">Click here to vote for B candidate</button><br>
+            <button onclick="C()" id="bttn">Click here to vote for C candidate</button>
+            <button onclick="D()" id="bttn">Click here to vote for D candidate</button><br>
             <button onclick="Checkstatus()" id="endd">Click here to check the status</button>
             <button onclick="end()" id="endd">click here to see the winner name</button>
         </fieldset>
@@ -41,93 +39,93 @@
     <script type="text/javascript">
         function text()
         {
-            document.getElementById("label1").innerHTML="Harman : "+a; 
-            document.getElementById("label2").innerHTML="Gurnoor : "+b;
-            document.getElementById("label3").innerHTML="Joban : "+c;
-            document.getElementById("label4").innerHTML="Mehraj : "+d;
+            document.getElementById("label1").innerHTML="A's votes: "+a; 
+            document.getElementById("label2").innerHTML="B's votes: "+b;
+            document.getElementById("label3").innerHTML="C's votes: "+c;
+            document.getElementById("label4").innerHTML="D's votes: "+d;
         }
         var a=0;
     function A()
         {
-            console.log("Pressed Harman candidate button");
+            console.log("Pressed A candidate button");
                a++;
             text();
         }
         var b=0;
     function B()
         {
-            console.log("pressed Gurnoor candidate button");
+            console.log("pressed B candidate button");
             b++;
             text();
         }
         var c=0;
     function C()
         {
-            console.log("Pressed Joban candidate button");
+            console.log("Pressed C candidate button");
             c++;
             text();
         }
         var d=0;
     function D()
         {
-            console.log("pressed Mehraj candidate button");
+            console.log("pressed D candidate button");
             d++;
             text();
         }
         function Checkstatus()
         {
             
-        alert("Harman candidate has "+a+" current votes");
-        alert("Gurnoor candidate has "+b+" current votes");
-        alert("Joban candidate has "+c +" current votes");
-        alert("Mehraj candidate has "+d+" current votes");
+        alert("A candidate has "+a+" current votes");
+        alert("B candidate has "+b+" current votes");
+        alert("C candidate has "+c +" current votes");
+        alert("D candidate has "+d+" current votes");
         }
     function end()
         {
             if(a>b&&a>c&&a>d)
                 {
-                         alert("Harman is winner with "+a+" votes ");
+                         alert("A is winner with "+a+" votes ");
                 }
               else if(b>a&&b>c&&b>d)
                 {
-                    alert("Gurnoor is winner with "+b+" votes ");
+                    alert("B is winner with "+b+" votes ");
                 }
              else if(c>d&&c>a&&c>b)
                 {
-                    alert("Joban is winner with "+c+" votes ");
+                    alert("C is winner with "+c+" votes ");
                 }
            else if(d>a&&d>b&&d>c)
                 {
-                alert("Mehraj is the winner with "+d+" votes ");
+                alert("D is the winner with "+d+" votes ");
                 }
               else if(a==b)
                 {
-                    alert("Both Harman and Gurnoor are winners with "+a+" votes ");
+                    alert("Both A and B are winners with "+a+" votes ");
                 }
              else if(a==c)
                 {
-                 alert("Both Harman and Joban are winners with "+c+" votes ");
+                 alert("Both A and C are winners with "+c+" votes ");
                     
                 }
              else if(a==d)
                 {
-                    alert("Both Harman and Mehraj are the winners with "+a+" votes ");
+                    alert("Both A and D are the winners with "+a+" votes ");
                 }
              else if(b==c)
                 {
-                alert("Both Gurnoor and Joban are winners with "+b+" votes ");
+                alert("Both B and C are winners with "+b+" votes ");
                 }
             else if(b==d)
                 {
-                alert("Both Gurnoor and Mehraj are the winners with "+b+" votes ");
+                alert("Both B and D are the winners with "+b+" votes ");
                 }
             else if(c==d)
                 {
-                    alert("Both Joban and Mehraj are the winners with "+ c +" votes ");
+                    alert("Both C and D are the winners with "+ c +" votes ");
                 }
             else
                 {
-                    alert("Mehraj is the winner");
+                    alert("D is the winner");
                 }   
         }
     </script>

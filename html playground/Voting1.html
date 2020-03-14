@@ -17,12 +17,21 @@
             margin-top:16px;
             border-color: orange;
         }
-        #label{
-            visibility: none;
+        #label1{
+            visibility: hidden;
+        }
+        #label2{
+            visibility: hidden;
+        }
+        #label3{
+            visibility: hidden;
+        }
+        #label4{
+            visibility: hidden;
         }
     </style>
     </head>
-<body>
+<body background-color:rgb(255,255,187)>
     <center>
         <label id="label1"> Harman:</label>
         <label id="label2"> Gurnoor:</label>
@@ -30,21 +39,42 @@
         <label id="label4"> Mehraj:</label>
         <fieldset>
             <legend><h2 style="color:darkorange">VOTING PAGE</h2></legend>
-            <button onclick="A()" id="bttn">Click here to vote for Harman candidate</button>
+            <table>
+            <tr>
+                <td padding="10px"><center>
+                    <img src="C:\Users\abc\Desktop\harman.jpg" width="250px" height="auto" style="border-radius: 100px;"><br>
+                    <button onclick="A()" id="bttn">Vote for Harman</button>
+                </center></td>
+                <td padding="10px"><center>
+                    <img src="C:\Users\abc\Desktop\harman.jpg" width="250px" height="auto" style="border-radius: 100px;"><br>
+                    <button onclick="B()" id="bttn">Vote for Harman</button>
+               </center></td>
+                <td padding="10px"><center>
+                    <img src="C:\Users\abc\Desktop\harman.jpg" width="250px" height="auto" style="border-radius: 100px;"><br>
+                    <button onclick="C()" id="bttn">Vote for Harman</button>
+                </center></td>
+                <td padding="10px"><center>
+                    <img src="C:\Users\abc\Desktop\harman.jpg" width="250px" height="auto" style="border-radius: 100px;"><br>
+                    <button onclick="D()" id="bttn">Vote for Harman</button>
+                </center></td>
+            </tr>
+        </table>
+        
+        <!--     <p align="left"></p>
             <button onclick="B()" id="bttn">Click here to vote for Gurnoor candidate</button><br>
             <button onclick="C()" id="bttn">Click here to vote for Joban candidate</button>
             <button onclick="D()" id="bttn">Click here to vote for Mehraj candidate</button><br>
             <button onclick="Checkstatus()" id="endd">Click here to check the status</button>
             <button onclick="end()" id="endd">click here to see the winner name</button>
-        </fieldset>
+         --></fieldset>
     </center>
     <script type="text/javascript">
         function text()
         {
             document.getElementById("label1").innerHTML="Harman : "+a; 
-            document.getElementById("label2").innerHTML="Gurnoor : "+b;
-            document.getElementById("label3").innerHTML="Joban : "+c;
-            document.getElementById("label4").innerHTML="Mehraj : "+d;
+            document.getElementById("label2").innerHTML="Harman : "+b;
+            document.getElementById("label3").innerHTML="Harman : "+c;
+            document.getElementById("label4").innerHTML="Harman : "+d;
         }
         var a=0;
     function A()
@@ -56,21 +86,21 @@
         var b=0;
     function B()
         {
-            console.log("pressed Gurnoor candidate button");
+            console.log("pressed Harman candidate button");
             b++;
             text();
         }
         var c=0;
     function C()
         {
-            console.log("Pressed Joban candidate button");
+            console.log("Pressed Harman candidate button");
             c++;
             text();
         }
         var d=0;
     function D()
         {
-            console.log("pressed Mehraj candidate button");
+            console.log("pressed Harman candidate button");
             d++;
             text();
         }
@@ -78,9 +108,9 @@
         {
             
         alert("Harman candidate has "+a+" current votes");
-        alert("Gurnoor candidate has "+b+" current votes");
-        alert("Joban candidate has "+c +" current votes");
-        alert("Mehraj candidate has "+d+" current votes");
+        alert("Harman candidate has "+b+" current votes");
+        alert("Harman candidate has "+c +" current votes");
+        alert("Harman candidate has "+d+" current votes");
         }
     function end()
         {
@@ -90,44 +120,44 @@
                 }
               else if(b>a&&b>c&&b>d)
                 {
-                    alert("Gurnoor is winner with "+b+" votes ");
+                    alert("Harman is winner with "+b+" votes ");
                 }
              else if(c>d&&c>a&&c>b)
                 {
-                    alert("Joban is winner with "+c+" votes ");
+                    alert("Harman is winner with "+c+" votes ");
                 }
            else if(d>a&&d>b&&d>c)
                 {
-                alert("Mehraj is the winner with "+d+" votes ");
+                alert("Harman is the winner with "+d+" votes ");
                 }
               else if(a==b)
                 {
-                    alert("Both Harman and Gurnoor are winners with "+a+" votes ");
+                    alert("Both Harman and Harmanr are winners with "+a+" votes ");
                 }
              else if(a==c)
                 {
-                 alert("Both Harman and Joban are winners with "+c+" votes ");
+                 alert("Both Harman and Harman are winners with "+c+" votes ");
                     
                 }
              else if(a==d)
                 {
-                    alert("Both Harman and Mehraj are the winners with "+a+" votes ");
+                    alert("Both Harman and Harman are the winners with "+a+" votes ");
                 }
              else if(b==c)
                 {
-                alert("Both Gurnoor and Joban are winners with "+b+" votes ");
+                alert("Both Harman and Harman are winners with "+b+" votes ");
                 }
             else if(b==d)
                 {
-                alert("Both Gurnoor and Mehraj are the winners with "+b+" votes ");
+                alert("Both Harman and Harman are the winners with "+b+" votes ");
                 }
             else if(c==d)
                 {
-                    alert("Both Joban and Mehraj are the winners with "+ c +" votes ");
+                    alert("Both Harman and Harman are the winners with "+ c +" votes ");
                 }
             else
                 {
-                    alert("Mehraj is the winner");
+                    alert("Harman is the winner");
                 }   
         }
     </script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Row's Name</title>
+</head>
+<body>
+     <h2>Row's Name</h2>
+
+<script>
+
+		var row1 = ["Harman","SukhSagar","Dilawar","Mehraj","Raj"];
+		var row2 = ["Ram","Sham","Dido","Mehtab","Ramu"];
+		var row3 = ["Raju","Shanti","Aaryan","Babu","Rajveer"];
+		function find(student){
+			for(var i=0;i<5;i++)
+			{
+				if(student===row1[i]){
+					console.log("found in First Row at "+ parseInt(i+1)+ " location.");
+					alert("found in First Row at "+ parseInt(i+1)+ " location.");
+					return;
+				}
+				else if(student===row2[i]){
+					console.log("found in Second Row at " + parseInt(i+1)+ " location.");
+					alert("found in Second Row at " + parseInt(i+1)+ " location.");
+					return;
+				}
+				else if(student===row3[i]){
+					console.log("found in Third Row at " + parseInt(i+1)+ " location.");
+					alert("found in Third Row at " + parseInt(i+1)+ " location.");
+					return;
+				}
+			}
+			console.log("Not found in the rows");
+			alert("Not found in the rows");
+			return;
+		}
+</script>
+</body>
+</html>
