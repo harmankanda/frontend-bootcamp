@@ -8,22 +8,28 @@
 
 <script>
 
-		var row1 = ["Harman","SukhSagar","Dilawar","Mehraj","Raj"];
-		var row2 = ["Ram","Sham","Dido","Mehtab","Ramu"];
-		var row3 = ["Raju","Shanti","Aaryan","Babu","Rajveer"];
+		var row1 = ["Harman","Sagar","Raman","Priya"];
+		var row2 = ["Kiran","Anil","Aakriti","Rahul","Sandeep"];
+		var row3 = ["Babu","Manmeet","Simran"];
 		function find(student){
-			for(var i=0;i<5;i++)
+			for(var i=0;i<4;i++)
 			{
 				if(student===row1[i]){
 					console.log("found in First Row at "+ parseInt(i+1)+ " location.");
 					alert("found in First Row at "+ parseInt(i+1)+ " location.");
 					return;
 				}
-				else if(student===row2[i]){
+			}	
+			for(var i=0;i<5;i++)
+			{	
+				if(student===row2[i]){
 					console.log("found in Second Row at " + parseInt(i+1)+ " location.");
 					alert("found in Second Row at " + parseInt(i+1)+ " location.");
 					return;
 				}
+			}	
+			for	(var i=0;i<3;i++)
+			{
 				else if(student===row3[i]){
 					console.log("found in Third Row at " + parseInt(i+1)+ " location.");
 					alert("found in Third Row at " + parseInt(i+1)+ " location.");

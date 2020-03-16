@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Row's Name</title>
+</head>
+<body>
+     <h2>Row's Name</h2>
+
+<script>
+
+		var row1 = ["10","12","13","15","19"];
+		var row1Count = 5;
+
+		function mid_insert(start_index){
+			var start_index;
+			for (i=length;i<start_index;i--){
+				row1[i]=row1[i-1,i=start_index];
+			
+		}
+		row1[i]=newItem;
+			row1Count++;
+			console.log("Added the new number. The current array is:");
+			printArray();
+			return;
+		}
+
+		function b_insert(newItem){
+			var length = row1Count;
+			for ( i=length;i>0;i--){
+				row1[i]=row1[i-1];
+			}			
+			row1[i]=newItem;
+			row1Count++;
+			console.log("Added the new number. The current array is:");
+			printArray();
+			return;
+		}
+
+		function b_remove1(){
+			var length = row1Count;
+			for( i=0; i<length;i++){
+				row1[i]=row1[i+1];
+			}
+			row1Count--;
+			console.log("Removed the first number. The current array is:");
+			printArray();
+			return;
+		}
+
+		function insert(newItem){
+			row1[row1Count]=newItem;
+			row1Count++;
+			console.log("Added the new number. The current array is:");
+			printArray();
+			return;
+		}
+
+		function remove(){
+			
+			if(row1Count>0){
+				row1Count--;
+				printArray();	
+			}
+			else
+				console.log("No element to remove. Array is empty.");
+			
+		}
+
+		function printArray(){
+			for(var i=0;i<row1Count;i++)
+			{
+				console.log(row1[i] + " ");
+			}	
+			return;
+		}
+</script>
+</body>
+</html>
