@@ -1,0 +1,54 @@
+<!-- Program to insert a number in the array after a given number (provided it exists in the array)
+EXAMPLE: Insert 10 after 8 in [3,5,8,12,15,18,21]  => OUTPUT: [3,5,8,10,12,15,18,21]
+ -->
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Just Practice</title>
+</head>
+<body>
+	<script>
+		var row1=[3,5,8,12,15,18,21]
+		var row1Count = 7;
+		function find(number){
+			for(var i=0;i<row1Count;i++)
+			{
+				if(number==row1[i]){
+					return i;
+				}
+			}	
+			return -1;
+		}	
+	
+
+		function printArray(){
+				console.log("ELEMENTS in ARRAY (inside printArray) " +row1Count);
+				for (i=0;i<row1Count;i++){
+					console.log(row1[i]);
+				}
+				return;
+			}
+
+		function mid_delet(number){
+				// find(locat);
+				var locat = find(number);
+				if(locat!=-1){
+					console.log("Array before deleting.");
+					printArray();
+					for (i=locat;i<row1Count;i++){
+						row1[i]=row1[i+1];
+					}
+					row1Count--;
+					console.log("ELEMENTS in ARRAY " +row1Count);
+					console.log("Added the new number. The current array is:");
+					printArray();	
+				}
+				else{
+					console.log("Number not found.");
+				}
+				return;
+			}
+
+	</script>		
+</body>
+</html>	

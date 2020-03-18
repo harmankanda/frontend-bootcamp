@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Just Practice</title>
+</head>
+<body>
+	<script>
+		function get_last(number){
+
+				var lastdigit;
+				lastdigit = number % 10;
+				return lastdigit;
+			}
+
+		function digit_count(number){
+
+				var count=0;
+				while(number>0){
+					count++;
+					number=parseInt(number/10);
+				}
+				return count;
+			}
+
+		function get_first(number){
+
+				var firstdigit;
+				var count = digit_count(number);
+				firstDigit = parseInt (number / 10**(count-1));
+				return firstDigit;
+			}
+		function get_middle(number){
+
+				var middledigit;
+				var lastdigit= get_last(number);
+				var digit=digit_count(number);
+				middledigit=(number%10**(digit-1)-lastdigit);
+				return middledigit;
+			}
+		function swap(number){
+
+				var value = 0; 
+				var count = digit_count(number);
+				var value1 = 0;
+				var mid = get_middle(number);
+				var last = get_last(number);
+				var first = get_first(number);
+				value = mid + first;
+				value1 = ((10**(count-1))*last) + value;
+					return value1;
+		}
+		function isprime(number){
+
+				var i, flag=1;
+						for(i=2;i<=number/2;i++)
+						{
+						    if(number%i==0)
+				      	   {
+							  	flag=0;
+							  	break;
+						   }
+						 }   
+						 return flag;
+					}	
+
+		function main(number){
+
+				var mid = get_middle(number);
+				var last = get_last(number);
+				var first = get_first(number);
+				var count = digit_count(number);
+				var change = swap(number);
+				var prime = isprime(number);
+			}
+
+	</script>		
+</body>
+</html>	

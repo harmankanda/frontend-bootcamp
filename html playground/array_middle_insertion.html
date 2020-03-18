@@ -1,0 +1,55 @@
+<!-- Program to insert a number in the array after a given number (provided it exists in the array)
+EXAMPLE: Insert 10 after 8 in [3,5,8,12,15,18,21]  => OUTPUT: [3,5,8,10,12,15,18,21]
+ -->
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Just Practice</title>
+</head>
+<body>
+	<script>
+		var row1=[3,5,8,12,15,18,21]
+		var row1Count = 7;
+		function find(locat){
+			for(var i=0;i<7;i++)
+			{
+				if(locat===row1[i]){
+					console.log("This number is located at "+ parseInt(i+1)+ " location.");
+					return;
+				}
+				else{
+					console.log("This number does not exists.")
+				}
+			}	
+		}	
+	
+
+		function printArray(){
+				console.log(row1);
+				return;
+			}
+
+		function mid_insert(locat,new_number){
+				find(locat);
+				var locat;
+				console.log("Array before insertion.");
+				printArray();
+				for (i=row1Count;i>locat;i--){
+					row1[i]=row1[i-1];
+				}
+			
+				row1[i]=new_number;
+				row1Count++;
+				console.log("Added the new number. The current array is:");
+				printArray();
+				return;
+			}
+		function check(){
+			mid_insert(locat,new_number);
+			var locat; var new_number;
+			row1.sort(function(a, b){return a - b});
+			console.log(row1);
+		}
+	</script>		
+</body>
+</html>	

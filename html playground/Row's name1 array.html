@@ -8,16 +8,18 @@
 
 <script>
 
-		var row1 = ["10","12","13","15","19"];
+		var row1 = [10,12,13,15,19];
 		var row1Count = 5;
 
-		function mid_insert(start_index){
+		function mid_insert(start_index,new_number){
+			console.log("Array before insertion.");
+			printArray();
 			var start_index;
-			for (i=length;i<start_index;i--){
-				row1[i]=row1[i-1,i=start_index];
-			
-		}
-		row1[i]=newItem;
+			for (i=row1Count;i>start_index-1;i--){
+				row1[i]=row1[i-1];
+			}
+		
+			row1[i]=new_number;
 			row1Count++;
 			console.log("Added the new number. The current array is:");
 			printArray();
@@ -67,10 +69,11 @@
 		}
 
 		function printArray(){
-			for(var i=0;i<row1Count;i++)
-			{
-				console.log(row1[i] + " ");
-			}	
+			// for(var i=0;i<row1Count;i++)
+			// {
+			// 	console.log(row1[i] + " ");
+			// }	
+			console.log(row1);
 			return;
 		}
 </script>
