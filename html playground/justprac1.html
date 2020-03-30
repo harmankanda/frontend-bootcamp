@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function Find_Number(){
+        	var secretNumber = Math.round(Math.random()*1000)%100;
+        	var attempts = 0;
+			var fill;
+			do{
+				fill=prompt("Find The Number Which Is Between 1 To 100");
+			if(fill>secretNumber){
+				attempts++;
+				alert("Enter Number is too Big the number Supposed.");
+				}
+			else if(fill<secretNumber){
+				attempts++;
+				alert("Enter Number is too Small the number Supposed.");
+			}	
+			else if(fill==secretNumber){
+				alert("The Number Has been found in "+attempts+" attempts.");
+				return;
+			}
+			}
+			while(secretNumber!=fill && attempts<15);
+			alert("Game over");
+			return;
+			
+		}
+	</script>	
+</head>
+</html>	

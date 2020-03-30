@@ -57,6 +57,29 @@ body {
     float: none;
   }
 }
+p{
+  position: relative;
+  text-align: center;
+  font-size: 4vmin;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: .8;
+  background: linear-gradient(90deg,#000,#fff,#000);
+  background-size: 80% 100%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+@keyframes shine{
+  0%{
+    background-position-x: -500%;
+  }
+  100%{
+     background-position-x: 500%;
+  }
+}
 </style>
 </head>
 <body>
@@ -74,6 +97,10 @@ body {
   <h1>Only Practice</h1>
   <p>Practice makes us better to learn new things for future use.</p>
 </div>
-
+<p> Welcome to Webcooks Community<br><br>
+  <a href="bit.ly/join-webcooks-online">
+    Join on Whatsapp
+  </a>
+</p>
 </body>
 </html>

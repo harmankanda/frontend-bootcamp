@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function Check_Number(number){
+        	var number = 0;
+			var minimum;
+			var number = Math.round(number);
+			do{
+			number=prompt("Enter a number.")
+			if(minimum>number && number>=0){
+			minimum = number
+				}
+			}
+			while(number>=0);
+				console.log(minimum);
+		}
+	</script>	
+</head>
+</html>	
+
+<!-- Didnt check if the first number entered is negative.
+We have to initialize minimum with the first non-negative number entered
+
+
+function enterNumbers(){
+	var min;
+	var number = prompt("Enter a number (negative to quit):");
+	if(number>=0){
+		min = number;
+		while(number>=0){
+			number = prompt("Enter non-negative number to exit.");
+			if( min > number && number>=0){
+				min	= number;
+			}
+		}
+		console.log("The least negative number is " + Math.round(min));
+	}
+	else{
+	
+		console.log("No numbers.")
+	}
+} -->

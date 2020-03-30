@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Row's Name</title>
+</head>
+<body>
+     <h2>Row's Name</h2>
+
+<script>
+		var row1=[3,5,8,12,15,18,21]
+		var row1Count = 7;
+		function printArray(){
+				console.log(row1);
+				return;
+			}
+
+
+		function b_insert(newItem){
+			var length = row1Count;
+			for ( i=length;i>0;i--){
+				row1[i]=row1[i-1];
+			}			
+			row1[i]=newItem;
+			row1Count++;
+			row1.sort(function(a, b){return a - b});
+			console.log("Added the new number. The current array is:");
+			printArray();
+			return;
+		}
+	</script>
+</body>
+</html>		
